@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  background: #0f172a; /* dark blue */
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app {
+  width: 100%;
+  max-width: 1100px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 4px;
+}
+
+header p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.card {
+  background: #020617;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.8);
+  border: 1px solid #1f2937;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+form {
+  margin-top: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #9ca3af;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+  color: white;
+}
+
+.btn.primary:hover {
+  opacity: 0.9;
+}
+
+/* Summary row and filter */
+.summary-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.summary-card .total-amount {
+  font-size: 1.8rem;
+  margin-top: 6px;
+}
+
+.filter-card select {
+  margin-top: 4px;
+}
+
+/* Grid layout for table & chart */
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 16px;
+}
+
+/* Table styles */
+.table-wrapper {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: #020617;
+  z-index: 1;
+}
+
+th,
+td {
+  padding: 8px 6px;
+  text-align: left;
+  border-bottom: 1px solid #111827;
+}
+
+th {
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+tbody tr:nth-child(even) {
+  background: #020617;
+}
+
+tbody tr:nth-child(odd) {
+  background: #020617;
+}
+
+tbody tr:hover {
+  background: #111827;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: #111827;
+}
+
+/* Delete button */
+.btn-delete {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid,
+  .summary-row,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Filter Card Styling */
+.filter-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px;
+  background: #0b1220; /* slightly lighter than main card */
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+}
+
+.filter-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #e2e8f0;
+}
+
+.filter-card label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.filter-card select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-card select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.filter-card select:hover {
+  border-color: #475569;
+}
